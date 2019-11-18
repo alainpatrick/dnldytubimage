@@ -1,7 +1,7 @@
 {
-  "name": "y",
-  "version": "y",
-  "main": "y",
+  "name": "dnldytubimage",
+  "version": "1.0.0",
+  "main": "ytcmd.js",
   "license": "MIT",
   "private": true,
   "dependencies": {
