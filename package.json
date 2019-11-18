@@ -1,0 +1,11 @@
+{
+  "name": "y",
+  "version": "y",
+  "main": "y",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "fast-csv": "^3.4.0",
+    "sync-request": "^6.1.0"
+  }
+}
