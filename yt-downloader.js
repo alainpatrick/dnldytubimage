@@ -34,16 +34,21 @@ function downloadThumbnails(vidId) {
     var res = request('GET', url);
 
     if (!~VALIDSTATUS.indexOf(res.statusCode))
-      throw new Error('Invalid status code received for image class:', KEYS[i]);
+      throw new Error(
+        'Invalid status code received for image - sunable to download:',
+        KEYS[i]
+      );
     else {
-      console.log('Type:', res.headers['content-type']);
-      console.log('Length:', res.headers['content-length'], '\n');
-      var fileOut = 'Auto_' + vidId + '.jpg';
+      //console.log('Type:', res.headers['content-type']);
+      //console.log('Image Size:', res.headers['content-length'], '\n');
+      var fileOut = vidId + '.jpg';
       var finalFile = path.join(DIR, KEYS[i], fileOut);
       fs.writeFileSync(finalFile, res.body, 'binary');
     }
   }
-  console.log('Done!');
+  //console.log('Single image downloaded, OK!');
 }
 
 exports.downloadThumbnails = downloadThumbnails;
+
+// only errors will appea in console
