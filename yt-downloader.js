@@ -21,8 +21,9 @@ function makeDirectory(dir) {
   try {
     fs.mkdirSync(dir);
   } catch (e) {
-    if (e.code == 'EEXIST') console.warn(e.message);
-    else throw e;
+    console.error(e);
+    //if (e.code == 'EEXIST') console.warn(e.message);
+    //else throw e;
   }
 }
 
@@ -35,7 +36,7 @@ function downloadThumbnails(vidId) {
 
     if (!~VALIDSTATUS.indexOf(res.statusCode))
       throw new Error(
-        'Invalid status code received for image - sunable to download:',
+        'Invalid status code received for image - unable to download:',
         KEYS[i]
       );
     else {
