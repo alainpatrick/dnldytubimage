@@ -1,7 +1,7 @@
 var execSync = require('child_process').execSync;
 var Csvly = require('csvly');
 
-// edit your csv fie here
+// edit your csv file here
 var reader = new Csvly('./videoids.csv', {
   firstLineIsHeaders: true
 });
